@@ -1,0 +1,16 @@
+@import './base/variables';
+@import './base/common';
+@import './base/reset';
+@import './base/mixins';
+
+@import './components/btn';
+@import './components/pagination';
+
+@import './header/header';
+@import './header/form';
+
+@import './main/main';
+
+@import './modal/modal';
+
+@import './footer/footer';
