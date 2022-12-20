@@ -39,7 +39,7 @@ function renderposter(poster_path) {
   if (false) {
     return (poster = `https://image.tmdb.org/t/p/w300${poster_path}`);
   } else {
-    return (poster = `/src/images/logo.png`);
+    return (poster = `/images/logo.png`);
   }
 }
 
