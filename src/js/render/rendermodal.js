@@ -20,10 +20,22 @@ export async function onFilmClick(event) {
 
   const modalLightbox = basicLightbox.create(modalMurkup, {
     onShow: () => {
+      // modalLightbox.element()
+      //   .querySelector('.js-btn-queue')
+      //   .addEventListener('click', onBtnQueClick);
+
+      modalLightbox.element().querySelector('.js-btn-queue').onclick =
+        onBtnQueClick;
+
+      modalLightbox.element().querySelector('.js-btn-watched').onclick =
+        onBtnWatchedClick;
+
       modalLightbox.element().querySelector('.trailer-btn').onclick =
         showTrailer;
+
       modalLightbox.element().querySelector('.close-btn').onclick =
         onModalLightboxClose;
+
       document.addEventListener('keydown', onModalLightboxClose);
     },
     onClose: () => {
@@ -100,14 +112,17 @@ async function markupModal(film) {
       <p class="modal-overview">${overview}</p>
       <div class="modal-btns-wrap">
         <button
-          class="btn modal-watched-btn"
+          class="btn modal-watched-btn js-btn-watched"
           data-id="${id}"
           data-type="Watched"
         >
-          Add to watched
+          ${w ? 'remove to watced' : 'add to watced'}
         </button>
-        <button class="btn modal-queue-btn" data-id="${id}" data-type="Queue">
-          Add to queue
+        <br/>
+        <br/>
+        <br/>
+        <button class="btn modal-queue-btn js-btn-queue" data-id="${id}" data-type="Queue">
+          ${q ? 'remove to watced' : 'add to watced'}
         </button>
       </div>
     </div>`;
@@ -125,4 +140,35 @@ function murkupTrailer({ videos }) {
   allowfullscreen
   ></iframe>`;
   return markup;
+}
+
+let q = true;
+let w = true;
+
+function onBtnQueClick(event) {
+  if (q) {
+    q = false;
+    event.target.textContent = `add to queue`;
+    console.log(q);
+    return;
+  } else {
+    q = true;
+    event.target.textContent = `remove to queue`;
+    console.log(q);
+    return;
+  }
+}
+
+function onBtnWatchedClick(event) {
+  if (w) {
+    w = false;
+    event.target.textContent = `add to watced`;
+    console.log(w);
+    return;
+  } else {
+    w = true;
+    event.target.textContent = `remome to watced`;
+    console.log(w);
+    return;
+  }
 }

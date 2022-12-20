@@ -1,6 +1,8 @@
 import { refs } from '../refs';
 import ApiService from '../fetchservice';
 
+import image from '../../images/logo.png';
+
 const apiService = new ApiService();
 
 export async function renderHomePage(trendingFilms) {
@@ -18,7 +20,7 @@ export async function renderHomePage(trendingFilms) {
 
       return `<li class="library-item" data-id="${id}"><img
     class="film-poster"
-    src="${renderposter(poster_path)}"
+    src="${checkPoster(poster_path)}"
     alt="${original_title}"/>
      <div>
         <p class="film-name">${title}</p>
@@ -34,13 +36,13 @@ export async function renderHomePage(trendingFilms) {
   refs.mainLibrary.insertAdjacentHTML('beforeend', murkupHomePage.join(''));
 }
 
-function renderposter(poster_path) {
+import myImage2 from '../../images/logo.png';
+
+function checkPoster(poster_path) {
   let poster = ``;
-  if (false) {
+  if (poster_path) {
     return (poster = `https://image.tmdb.org/t/p/w300${poster_path}`);
   } else {
-    return (poster = `/images/logo.png`);
+    return (poster = myImage2);
   }
 }
-
-// https://image.tmdb.org/t/p/w300${poster_path}
