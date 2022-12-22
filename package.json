@@ -1,34 +1,41 @@
 {
-  "name": "parcel-project-template",
+  "name": "js-project-7",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://yabr87.github.io/test/",
+  "homepage": "https://Yulia0907/team-project-filmoteka",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /test/"
+    "build": "parcel build src/*.html --public-url /team-project-filmoteka/"
   },
+  
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/goitacademy/parcel-project-template.git"
+    "url": "git+https://github.com/NilKad/js-project-7.git"
   },
   "keywords": [],
-  "author": "Alexander Repeta <alexander.repeta@gmail.com>",
+  "author": "Alexander Kadulin <kadulin@gmail.com>",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/goitacademy/parcel-project-template/issues"
+    "url": "https://github.com/NilKad/js-project-7/issues"
   },
   "dependencies": {
-    "axios": "^1.2.1",
-    "basiclightbox": "^5.0.4",
-    "modern-normalize": "^1.1.0",
-    "tui-pagination": "^3.4.1"
+    "modern-normalize": "^1.1.0"
   },
   "devDependencies": {
     "@parcel/transformer-sass": "^2.6.0",
+    "assert": "^2.0.0",
+    "axios": "^1.1.2",
+    "basiclightbox": "^5.0.4",
     "buffer": "^6.0.3",
+    "canvas-confetti": "^1.5.1",
+    "firebase": "^9.11.0",
+    "lodash.debounce": "^4.0.8",
+    "notiflix": "^3.2.5",
     "parcel": "^2.6.0",
     "parcel-reporter-clean-dist": "^1.0.4",
-    "posthtml-include": "^1.7.4"
+    "posthtml-include": "^1.7.4",
+    "process": "^0.11.10",
+    "tui-pagination": "^3.4.1"
   },
   "browserslist": "> 0.5%, last 2 versions, not dead"
 }

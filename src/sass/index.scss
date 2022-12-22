@@ -1,16 +1,23 @@
-@import './base/variables';
+// @import './abstracts/variables';
+@import './abstracts/abstracts';
+@import './base/base';
 @import './base/common';
-@import './base/reset';
-@import './base/mixins';
 
-@import './components/btn';
-@import './components/pagination';
+@import './layout/container';
+// @import './layout/header';
+@import './components/form-search';
 
-@import './header/header';
-@import './header/form';
+@import './components/paginations';
 
-@import './main/main';
+// @import './layout/footer';
 
-@import './modal/modal';
+@import './layout/movies-gallery';
 
-@import './footer/footer';
+@import './components/scroll';
+
+// @import './layout/header-mylibrary';
+
+// @import './components/preloader';
+// @import './components/spinner';
+// @import './components/theme-switch-button';
+// @import './base/dark-theme-styles';
